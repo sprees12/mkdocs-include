@@ -1,5 +1,4 @@
 from jinja2 import Template
-from mkdocs import utils as mkdocs_utils
 from mkdocs.config import config_options
 from mkdocs.plugins import BasePlugin
 
@@ -7,7 +6,7 @@ class IncludePlugin(BasePlugin):
 
     config_scheme = (
         # !!! TODO support multiple source dirs/lingos
-        ('src_path', config_options.Type(mkdocs_utils.string_types, default=None)),
+        ('src_path', config_options.Type(str, default=None)),
     )
     page = None
 
